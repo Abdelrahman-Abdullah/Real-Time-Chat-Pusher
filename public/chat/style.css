@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --header-color: rgb(30,144,255);
+    --sender-color : rgb(135,206,250);
+    --icon-color : rgb(172, 172, 172);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.container .chat-header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    padding: 25px;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--header-color);
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+    color: white;
+}
+.container .chat-header > a {
+    color: white;
+}
+.container .chat-body {
+    height: 80%;
+    padding: 0 25px;
+    /*margin-bottom: 20px;*/
+    overflow-y: auto;
+    position: relative;
+}
+.chat-body::-webkit-scrollbar{
+    width: 5px;
+
+}
+.chat-body::-webkit-scrollbar-thumb{
+    background: var(--header-color);
+    border-radius: 4px;
+}
+.chat-body::-webkit-scrollbar-thumb:hover{
+    background: rgb(29, 137, 241);
+    border-radius: 4px;
+}
+
+.container .chat-body #left {
+    float: left;
+    clear: both;
+}
+
+.container .chat-body #right {
+    float: right;
+    clear: both;
+}
+.message{
+    display: flex;
+    width: fit-content;
+    max-width: 80%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 20px 0 0 0;
+}
+
+.message i{
+    font-size: 30px;
+    color: var(--icon-color);
+}
+
+.message-box{
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 20px;
+    padding: 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: fit-content;
+    color: black;
+}
+.sent
+{
+    border-radius:  20px 20px 0 20px;
+    -webkit-border-radius:  20px 20px 0 20px;
+    -moz-border-radius:  20px 20px 0 20px;
+    -ms-border-radius:  20px 20px 0 20px;
+    -o-border-radius:  20px 20px 0 20px;
+    background-color: rgba(207, 236, 253, 0.78);
+}
+.received{
+    border: 1px solid var(--header-color);
+    border-radius:  20px 20px 20px 0;
+    -webkit-border-radius:  20px 20px 20px 0;
+    -moz-border-radius:  20px 20px 20px 0;
+    -ms-border-radius:  20px 20px 20px 0;
+    -o-border-radius:  20px 20px 20px 0;
+    color: gray;
+    white-space: pre-wrap;
+
+}
+.sent p , .received p{
+    word-wrap: break-word;
+}
+
+.container .chat-footer{
+    height: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.234);
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    -ms-border-radius: 0 0 20px 20px;
+    -o-border-radius: 0 0 20px 20px;
+}
+.chat-footer input{
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.399);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.chat-footer input:focus{
+    border-color: var(--header-color);
+}
+.chat-footer button{
+    cursor: pointer;
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--header-color);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.chat-footer button:hover{
+    background-color: transparent;
+    color: var(--header-color);
+    border: 1px solid var(--header-color);
+}
+
+@media screen and (max-width: 500px ) {
+    .container{
+        width: 90%;
+    }
+    .message i{
+        font-size: 20px;
+    }
+    .message-box p{
+        font-size: 10px;
+        width: 100%;
+    }
+}
+
