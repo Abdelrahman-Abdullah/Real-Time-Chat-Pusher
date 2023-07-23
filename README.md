@@ -38,4 +38,4 @@ php artisan serve
 > - You Can Achieve The Prev Note By Open One User On Google `Normal Mode` another in `Incognito`
 
 ## Wanna Help ?
-- How To Use Chat [Video]() In Linked in  
+- How To Use Chat [Video](https://www.linkedin.com/posts/abdelrahman-abdullah-85817a274_laravel-php-pusher-activity-7088973008807034881-Ee_m?utm_source=share&utm_medium=member_desktop) In Linked in  
